@@ -72,6 +72,8 @@ public interface TweakfailureItems {
         entries.addAfter(IRON_CLEAVER, GOLD_CLEAVER);
         entries.addAfter(GOLD_CLEAVER, DIAMOND_CLEAVER);
         entries.addAfter(DIAMOND_CLEAVER, NETHERITE_CLEAVER);
+
+        entries.addAfter(Items.SPYGLASS, ALLAY_PENDANT);
     }
 
     private static void addIngredientEntries(FabricItemGroupEntries entries) {
