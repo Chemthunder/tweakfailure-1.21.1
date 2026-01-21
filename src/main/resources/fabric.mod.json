@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "tweakfailure",
+  "version": "${version}",
+  "name": "Tweakfailure",
+  "description": "Tweaks and edits for Failed Voyage SMP",
+  "authors": [
+    "KindlingCinder"
+  ],
+  "contributors": [
+    "Chemthunder - Developer"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/tweakfailure/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.kindling.tweakfailure.Tweakfailure"
+    ],
+    "fabric-datagen": [
+      "net.kindling.data.TweakfailureDataGenerator"
+    ]
+  },
+  "mixins": [
+    "tweakfailure.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
