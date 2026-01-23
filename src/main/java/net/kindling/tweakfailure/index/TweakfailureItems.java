@@ -33,22 +33,19 @@ public interface TweakfailureItems {
 
     // cleavers
     Item FLINT_CLEAVER = create("flint_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
-            .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.WOOD, 2, -2.5f)));
-
-    Item STONE_CLEAVER = create("stone_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
-            .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.STONE, 2, -2.5f)));
+            .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.WOOD, 2, -2.5f)));
 
     Item IRON_CLEAVER = create("iron_cleaver", CleaverItem::new,  new Item.Settings().maxCount(1)
-            .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.5f)));
+            .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.5f)));
 
     Item GOLD_CLEAVER = create("gold_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
-            .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.GOLD, 2, -2.5f)));
+            .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.GOLD, 2, -2.5f)));
 
     Item DIAMOND_CLEAVER = create("diamond_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
-            .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 2, -2.5f)));
+            .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 2, -2.5f)));
 
     Item NETHERITE_CLEAVER = create("netherite_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
-            .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 2, -2.5f)));
+            .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 2, -2.5f)));
 
 
     static Item create(String name, Function<Item.Settings, Item> factory, Item.Settings settings) {
@@ -66,12 +63,11 @@ public interface TweakfailureItems {
     }
 
     private static void addToolsEntries(FabricItemGroupEntries entries) {
-        entries.addAfter(Items.NETHERITE_HOE, FLINT_CLEAVER);
-        entries.addAfter(FLINT_CLEAVER, STONE_CLEAVER);
-        entries.addAfter(STONE_CLEAVER, IRON_CLEAVER);
-        entries.addAfter(IRON_CLEAVER, GOLD_CLEAVER);
-        entries.addAfter(GOLD_CLEAVER, DIAMOND_CLEAVER);
-        entries.addAfter(DIAMOND_CLEAVER, NETHERITE_CLEAVER);
+        entries.addAfter(Items.STONE_HOE, FLINT_CLEAVER);
+        entries.addAfter(Items.IRON_HOE, IRON_CLEAVER);
+        entries.addAfter(Items.GOLDEN_HOE, GOLD_CLEAVER);
+        entries.addAfter(Items.DIAMOND_HOE, DIAMOND_CLEAVER);
+        entries.addAfter(Items.NETHERITE_HOE, NETHERITE_CLEAVER);
 
         entries.addAfter(Items.SPYGLASS, ALLAY_PENDANT);
     }

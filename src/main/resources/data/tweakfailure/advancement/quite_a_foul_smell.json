@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "tweakfailure:lard"
+    },
+    "title": "Quite a Foul Smell...",
+    "description": "Obtain Lard"
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "obtain_bonesaw": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "tweakfailure:lard"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_bonesaw"
+    ]
+  ]
+}

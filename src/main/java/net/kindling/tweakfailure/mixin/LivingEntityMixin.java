@@ -2,10 +2,13 @@ package net.kindling.tweakfailure.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import net.kindling.tweakfailure.index.TweakfailureItems;
 import net.kindling.tweakfailure.item.CleaverItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.PiglinEntity;
+import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.context.LootContextParameterSet;
@@ -14,6 +17,7 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 
 import java.util.function.Consumer;
 
@@ -31,6 +35,7 @@ public abstract class LivingEntityMixin extends Entity {
     @WrapOperation(method = "dropLoot", at = @At(value = "INVOKE", target = "Lnet/minecraft/loot/LootTable;generateLoot(Lnet/minecraft/loot/context/LootContextParameterSet;JLjava/util/function/Consumer;)V"))
     private void doubleLoot(LootTable instance, LootContextParameterSet parameters, long seed, Consumer<ItemStack> lootConsumer, Operation<Void> original) {
         LivingEntity livingEntity = this.getAttacker();
+        LivingEntity goober = (LivingEntity) (Object) this;
 
         if (livingEntity != null) {
             if (livingEntity.getMainHandStack().getItem() instanceof CleaverItem) {
@@ -39,6 +44,15 @@ public abstract class LivingEntityMixin extends Entity {
                 }
             } else {
                 original.call(instance, parameters, seed, lootConsumer);
+            }
+
+
+            if (livingEntity.getMainHandStack().getItem() instanceof CleaverItem) {
+                if ((goober instanceof PigEntity) || (goober instanceof PiglinEntity)) {
+                    original.call(instance, parameters, seed, lootConsumer);
+
+                    goober.dropStack(TweakfailureItems.LARD.getDefaultStack());
+                }
             }
         }
     }

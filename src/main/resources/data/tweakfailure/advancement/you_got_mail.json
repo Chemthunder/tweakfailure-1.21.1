@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "tweakfailure:allay_pendant"
+    },
+    "title": "You Got Mail!",
+    "description": "Obtain an Allay Pendant"
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "obtain_bonesaw": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "tweakfailure:allay_pendant"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_bonesaw"
+    ]
+  ]
+}

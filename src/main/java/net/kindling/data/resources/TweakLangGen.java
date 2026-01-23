@@ -17,7 +17,6 @@ public class TweakLangGen extends FabricLanguageProvider {
 
         // items
         builder.add(FLINT_CLEAVER, "Flint Cleaver");
-        builder.add(STONE_CLEAVER, "Stone Cleaver");
         builder.add(IRON_CLEAVER, "Iron Cleaver");
         builder.add(GOLD_CLEAVER, "Gold Cleaver");
         builder.add(DIAMOND_CLEAVER, "Diamond Cleaver");

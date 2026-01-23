@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": {
+    "item": "tweakfailure:diamond_cleaver"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "result": {
+    "count": 1,
+    "id": "tweakfailure:netherite_cleaver"
+  }
+}
