@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "|",
+    "#"
+  ],
+  "key": {
+    "#": [
+      {
+        "item": "minecraft:leather"
+      },
+      {
+        "item": "minecraft:rabbit_hide"
+      }
+    ],
+    "|": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:bundle"
+  },
+  "show_notification": false
+}
