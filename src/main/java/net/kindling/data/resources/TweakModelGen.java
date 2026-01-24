@@ -6,7 +6,7 @@ import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 
-import static net.kindling.tweakfailure.index.TweakfailureItems.*;
+import static net.kindling.impl.tweakfailure.index.TweakfailureItems.*;
 
 public class TweakModelGen extends FabricModelProvider {
     public TweakModelGen(FabricDataOutput output) {

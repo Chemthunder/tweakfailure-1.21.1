@@ -1,11 +1,13 @@
 {
+  "effect.tweakfailure.silly": "Silly",
+  "item.minecraft.lingering_potion.effect.silly": "Lingering Potion of Silliness",
+  "item.minecraft.potion.effect.silly": "Potion of Silliness",
+  "item.minecraft.splash_potion.effect.silly": "Splash Potion of Silliness",
   "item.tweakfailure.allay_pendant": "Allay Pendant",
-  "item.tweakfailure.boomcan": "Boomcan",
   "item.tweakfailure.diamond_cleaver": "Diamond Cleaver",
   "item.tweakfailure.flint_cleaver": "Flint Cleaver",
   "item.tweakfailure.gold_cleaver": "Gold Cleaver",
   "item.tweakfailure.iron_cleaver": "Iron Cleaver",
   "item.tweakfailure.lard": "Lard",
-  "item.tweakfailure.netherite_cleaver": "Netherite Cleaver",
-  "tooltip.pipebomb": "Legally distinct from Pipe Bombs"
+  "item.tweakfailure.netherite_cleaver": "Netherite Cleaver"
 }

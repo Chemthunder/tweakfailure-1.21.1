@@ -1,4 +1,4 @@
-package net.kindling.tweakfailure.item;
+package net.kindling.impl.tweakfailure.item;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.AllayEntity;
@@ -31,7 +31,7 @@ public class AllayPendantItem extends Item {
             }
 
             player.playSound(SoundEvents.ENTITY_ALLAY_ITEM_TAKEN);
-            player.swingHand(player.getActiveHand() );
+            player.swingHand(player.getActiveHand());
         }
         return super.useOnBlock(context);
     }

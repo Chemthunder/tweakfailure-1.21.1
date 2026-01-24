@@ -1,4 +1,4 @@
-package net.kindling.tweakfailure.item;
+package net.kindling.impl.tweakfailure.item;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;

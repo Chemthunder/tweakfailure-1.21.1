@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "equipment",
   "pattern": [
-    " F ",
-    " F ",
+    " I ",
+    " I ",
     "/  "
   ],
   "key": {
+    "I": {
+      "item": "minecraft:gold_ingot"
+    },
     "/": {
       "item": "minecraft:stick"
-    },
-    "F": {
-      "item": "minecraft:gold_ingot"
     }
   },
   "result": {
-    "item": "tweakfailure:flint_cleaver",
+    "id": "tweakfailure:gold_cleaver",
     "count": 1
   }
 }

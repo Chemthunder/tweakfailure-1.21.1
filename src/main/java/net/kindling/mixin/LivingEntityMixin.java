@@ -1,9 +1,9 @@
-package net.kindling.tweakfailure.mixin;
+package net.kindling.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import net.kindling.tweakfailure.index.TweakfailureItems;
-import net.kindling.tweakfailure.item.CleaverItem;
+import net.kindling.impl.tweakfailure.index.TweakfailureItems;
+import net.kindling.impl.tweakfailure.item.CleaverItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -17,7 +17,6 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 
 import java.util.function.Consumer;
 

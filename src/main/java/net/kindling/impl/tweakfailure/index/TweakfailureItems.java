@@ -1,11 +1,10 @@
-package net.kindling.tweakfailure.index;
+package net.kindling.impl.tweakfailure.index;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.kindling.tweakfailure.Tweakfailure;
-import net.kindling.tweakfailure.item.AllayPendantItem;
-import net.kindling.tweakfailure.item.BoomcanItem;
-import net.kindling.tweakfailure.item.CleaverItem;
+import net.kindling.impl.tweakfailure.Tweakfailure;
+import net.kindling.impl.tweakfailure.item.AllayPendantItem;
+import net.kindling.impl.tweakfailure.item.CleaverItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -18,33 +17,31 @@ public interface TweakfailureItems {
             .maxCount(1)
     );
 
-    Item LARD = create("lard", Item::new, new Item.Settings());
-
-    Item CANDY = create("candy", Item::new, new Item.Settings()
-            .maxCount(16)
-    );
-
-    Item BOOMCAN = create("boomcan", BoomcanItem::new, new Item.Settings()
-            .maxCount(5)
-    );
-
-
+    Item LARD = create("lard", HoneycombItem::new, new Item.Settings());
+//
+//    Item CANDY = create("candy", Item::new, new Item.Settings()
+//            .maxCount(16)
+//    );
+//
+//    Item BOOMCAN = create("boomcan", BoomcanItem::new, new Item.Settings()
+//            .maxCount(5)
+//    );
 
 
     // cleavers
-    Item FLINT_CLEAVER = create("flint_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
+    Item FLINT_CLEAVER = create("flint_cleaver", settings -> new CleaverItem(ToolMaterials.WOOD, settings), new Item.Settings().maxCount(1)
             .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.WOOD, 2, -2.5f)));
 
-    Item IRON_CLEAVER = create("iron_cleaver", CleaverItem::new,  new Item.Settings().maxCount(1)
+    Item IRON_CLEAVER = create("iron_cleaver", settings -> new CleaverItem(ToolMaterials.IRON, settings),  new Item.Settings().maxCount(1)
             .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.5f)));
 
-    Item GOLD_CLEAVER = create("gold_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
+    Item GOLD_CLEAVER = create("gold_cleaver", settings -> new CleaverItem(ToolMaterials.GOLD, settings), new Item.Settings().maxCount(1)
             .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.GOLD, 2, -2.5f)));
 
-    Item DIAMOND_CLEAVER = create("diamond_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
+    Item DIAMOND_CLEAVER = create("diamond_cleaver", settings -> new CleaverItem(ToolMaterials.DIAMOND, settings), new Item.Settings().maxCount(1)
             .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 2, -2.5f)));
 
-    Item NETHERITE_CLEAVER = create("netherite_cleaver", CleaverItem::new, new Item.Settings().maxCount(1)
+    Item NETHERITE_CLEAVER = create("netherite_cleaver", settings -> new CleaverItem(ToolMaterials.NETHERITE, settings), new Item.Settings().maxCount(1)
             .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 2, -2.5f)));
 
 

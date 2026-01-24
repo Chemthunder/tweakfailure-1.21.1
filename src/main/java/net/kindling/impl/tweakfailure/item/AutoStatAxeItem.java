@@ -1,4 +1,4 @@
-package net.kindling.tweakfailure.item;
+package net.kindling.impl.tweakfailure.item;
 
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;

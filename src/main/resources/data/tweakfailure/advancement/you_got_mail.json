@@ -8,7 +8,7 @@
   },
   "parent": "minecraft:husbandry/root",
   "criteria": {
-    "obtain_bonesaw": {
+    "obtain_item": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -21,7 +21,7 @@
   },
   "requirements": [
     [
-      "obtain_bonesaw"
+      "obtain_item"
     ]
   ]
 }
