@@ -3,6 +3,7 @@ package net.kindling.mixin;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.kindling.impl.tweakfailure.index.TweakfailureItems;
+import net.kindling.impl.tweakfailure.index.TweakfailureTags;
 import net.kindling.impl.tweakfailure.item.CleaverItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -37,7 +38,7 @@ public abstract class LivingEntityMixin extends Entity {
         LivingEntity goober = (LivingEntity) (Object) this;
 
         if (livingEntity != null) {
-            if (livingEntity.getMainHandStack().getItem() instanceof CleaverItem) {
+            if (livingEntity.getMainHandStack().isIn(TweakfailureTags.CLEAVERS)) {
                 for (int i = 0; i < 2; i++) {
                     instance.generateLoot(parameters, seed, this::dropStack);
                 }
@@ -46,7 +47,7 @@ public abstract class LivingEntityMixin extends Entity {
             }
 
 
-            if (livingEntity.getMainHandStack().getItem() instanceof CleaverItem) {
+            if (livingEntity.getMainHandStack().isIn(TweakfailureTags.CLEAVERS)) {
                 if ((goober instanceof PigEntity) || (goober instanceof PiglinEntity)) {
                     original.call(instance, parameters, seed, lootConsumer);
 

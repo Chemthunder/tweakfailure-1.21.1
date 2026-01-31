@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.kindling.impl.tweakfailure.index.TweakfailureEffects;
 import net.kindling.impl.tweakfailure.index.TweakfailureItems;
 import net.kindling.impl.tweakfailure.index.TweakfailurePotions;
+import net.kindling.impl.tweakfailure.index.TweakfailureTags;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +19,8 @@ public class Tweakfailure implements ModInitializer {
 	public void onInitialize() {
         TweakfailureItems.index();
         TweakfailureEffects.index();
-
         TweakfailurePotions.index();
+        TweakfailureTags.index();
 
 		LOGGER.info("Hello Fabric world!");
 	}

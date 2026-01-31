@@ -2,15 +2,17 @@ package net.kindling.data;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.kindling.data.resources.TweakItemTagGen;
 import net.kindling.data.resources.TweakLangGen;
 import net.kindling.data.resources.TweakModelGen;
 
 public class TweakfailureDataGenerator implements DataGeneratorEntrypoint {
-	@Override
+
 	public void onInitializeDataGenerator(FabricDataGenerator generator) {
         FabricDataGenerator.Pack pack = generator.createPack();
 
         pack.addProvider(TweakLangGen::new);
         pack.addProvider(TweakModelGen::new);
+        pack.addProvider(TweakItemTagGen::new);
 	}
 }
