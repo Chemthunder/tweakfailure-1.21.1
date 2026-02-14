@@ -1,0 +1,8 @@
+{
+  "comparator_output": 10,
+  "description": {
+    "translate": "item.tweakfailure.talionium.desc"
+  },
+  "length_in_seconds": 270,
+  "sound_event": "tweakfailure:talionium"
+}

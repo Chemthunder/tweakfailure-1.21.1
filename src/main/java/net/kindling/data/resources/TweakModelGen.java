@@ -22,6 +22,7 @@ public class TweakModelGen extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator generator) {
         generator.register(ALLAY_PENDANT, Models.GENERATED);
         generator.register(LARD, Models.GENERATED);
+        generator.register(TALIONIUM, Models.GENERATED);
 
         generator.register(FLINT_CLEAVER, Models.HANDHELD);
         generator.register(IRON_CLEAVER, Models.HANDHELD);

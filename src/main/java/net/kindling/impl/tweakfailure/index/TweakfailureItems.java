@@ -12,21 +12,9 @@ import net.minecraft.registry.Registry;
 import java.util.function.Function;
 
 public interface TweakfailureItems {
-
-    Item ALLAY_PENDANT = create("allay_pendant", AllayPendantItem::new, new Item.Settings()
-            .maxCount(1)
-    );
-
+    Item ALLAY_PENDANT = create("allay_pendant", AllayPendantItem::new, new Item.Settings().maxCount(1));
     Item LARD = create("lard", HoneycombItem::new, new Item.Settings());
-//
-//    Item CANDY = create("candy", Item::new, new Item.Settings()
-//            .maxCount(16)
-//    );
-//
-//    Item BOOMCAN = create("boomcan", BoomcanItem::new, new Item.Settings()
-//            .maxCount(5)
-//    );
-
+    Item TALIONIUM = create("talionium", Item::new, new Item.Settings().jukeboxPlayable(TweakfailureSounds.TALIONIUM_MUSIC));
 
     // cleavers
     Item FLINT_CLEAVER = create("flint_cleaver", settings -> new CleaverItem(ToolMaterials.WOOD, settings), new Item.Settings().maxCount(1)

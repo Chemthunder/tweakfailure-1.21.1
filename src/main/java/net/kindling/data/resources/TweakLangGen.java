@@ -3,6 +3,7 @@ package net.kindling.data.resources;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.registry.RegistryWrapper;
+import org.lwjgl.system.windows.HARDWAREINPUT;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,6 +25,7 @@ public class TweakLangGen extends FabricLanguageProvider {
 
         builder.add(ALLAY_PENDANT, "Allay Pendant");
         builder.add(LARD, "Lard");
+        builder.add(TALIONIUM, "Music Disc");
 
 //        builder.add(BOOMCAN, "Boomcan");
 //        builder.add("tooltip.pipebomb", "Legally distinct from Pipe Bombs");
