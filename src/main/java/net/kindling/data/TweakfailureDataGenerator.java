@@ -2,7 +2,7 @@ package net.kindling.data;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.kindling.data.resources.TweakItemTagGen;
+import net.kindling.data.data.TweakItemTagGen;
 import net.kindling.data.resources.TweakLangGen;
 import net.kindling.data.resources.TweakModelGen;
 

@@ -17,7 +17,7 @@ public class Tweakfailure implements ModInitializer {
         TweakfailureTags.index();
         TweakfailureSounds.index();
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info(MOD_ID + " is initialized");
 	}
 
     public static Identifier id(String path) {

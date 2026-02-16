@@ -8,13 +8,14 @@ import net.kindling.impl.tweakfailure.item.CleaverItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.Rarity;
 
 import java.util.function.Function;
 
 public interface TweakfailureItems {
     Item ALLAY_PENDANT = create("allay_pendant", AllayPendantItem::new, new Item.Settings().maxCount(1));
     Item LARD = create("lard", HoneycombItem::new, new Item.Settings());
-    Item TALIONIUM = create("talionium", Item::new, new Item.Settings().jukeboxPlayable(TweakfailureSounds.TALIONIUM_MUSIC));
+    Item TALIONIUM = create("talionium", Item::new, new Item.Settings().jukeboxPlayable(TweakfailureSounds.TALIONIUM_MUSIC).rarity(Rarity.RARE).maxCount(1));
 
     // cleavers
     Item FLINT_CLEAVER = create("flint_cleaver", settings -> new CleaverItem(ToolMaterials.WOOD, settings), new Item.Settings().maxCount(1)
@@ -55,6 +56,8 @@ public interface TweakfailureItems {
         entries.addAfter(Items.NETHERITE_HOE, NETHERITE_CLEAVER);
 
         entries.addAfter(Items.SPYGLASS, ALLAY_PENDANT);
+
+        entries.addAfter(Items.MUSIC_DISC_PIGSTEP, TALIONIUM);
     }
 
     private static void addIngredientEntries(FabricItemGroupEntries entries) {

@@ -9,6 +9,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PiglinEntity;
+import net.minecraft.entity.mob.WitherSkeletonEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootTable;
@@ -35,7 +36,7 @@ public abstract class LivingEntityMixin extends Entity {
     @WrapOperation(method = "dropLoot", at = @At(value = "INVOKE", target = "Lnet/minecraft/loot/LootTable;generateLoot(Lnet/minecraft/loot/context/LootContextParameterSet;JLjava/util/function/Consumer;)V"))
     private void doubleLoot(LootTable instance, LootContextParameterSet parameters, long seed, Consumer<ItemStack> lootConsumer, Operation<Void> original) {
         LivingEntity livingEntity = this.getAttacker();
-        LivingEntity goober = (LivingEntity) (Object) this;
+        LivingEntity target = (LivingEntity) (Object) this;
 
         if (livingEntity != null) {
             if (livingEntity.getMainHandStack().isIn(TweakfailureTags.CLEAVERS)) {
@@ -48,10 +49,20 @@ public abstract class LivingEntityMixin extends Entity {
 
 
             if (livingEntity.getMainHandStack().isIn(TweakfailureTags.CLEAVERS)) {
-                if ((goober instanceof PigEntity) || (goober instanceof PiglinEntity)) {
+                if ((target instanceof PigEntity) || (target instanceof PiglinEntity)) {
                     original.call(instance, parameters, seed, lootConsumer);
 
-                    goober.dropStack(TweakfailureItems.LARD.getDefaultStack());
+                    target.dropStack(new ItemStack(TweakfailureItems.LARD));
+                }
+
+                if (target instanceof WitherSkeletonEntity) {
+                    original.call(instance, parameters, seed, lootConsumer);
+
+                    int r = this.getWorld().getRandom().nextBetween(0, 3);
+
+                    if (r == 3) {
+                        target.dropStack(new ItemStack(TweakfailureItems.TALIONIUM));
+                    }
                 }
             }
         }

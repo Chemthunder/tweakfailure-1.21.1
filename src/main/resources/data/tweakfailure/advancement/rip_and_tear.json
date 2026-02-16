@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "tweakfailure:iron_cleaver"
+    },
+    "title": "Rip & Tear",
+    "description": "Obtain a Cleaver"
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "obtain_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#tweakfailure:cleavers"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_item"
+    ]
+  ]
+}
