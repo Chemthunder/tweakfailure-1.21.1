@@ -10,6 +10,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.PiglinEntity;
 import net.minecraft.entity.mob.WitherSkeletonEntity;
+import net.minecraft.entity.mob.ZoglinEntity;
 import net.minecraft.entity.passive.PigEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.loot.LootTable;
@@ -49,7 +50,7 @@ public abstract class LivingEntityMixin extends Entity {
 
 
             if (livingEntity.getMainHandStack().isIn(TweakfailureTags.CLEAVERS)) {
-                if ((target instanceof PigEntity) || (target instanceof PiglinEntity)) {
+                if ((target instanceof PigEntity) || (target instanceof PiglinEntity) || (target instanceof ZoglinEntity)) {
                     original.call(instance, parameters, seed, lootConsumer);
 
                     target.dropStack(new ItemStack(TweakfailureItems.LARD));
