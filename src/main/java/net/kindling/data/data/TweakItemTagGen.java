@@ -60,7 +60,5 @@ public class TweakItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(Items.MUSIC_DISC_WARD)
                 .add(TALIONIUM)
                 .setReplace(false);
-
-
     }
 }
