@@ -59,7 +59,7 @@ public abstract class LivingEntityMixin extends Entity {
                 if (target instanceof WitherSkeletonEntity) {
                     original.call(instance, parameters, seed, lootConsumer);
 
-                    int r = this.getWorld().getRandom().nextBetween(0, 3);
+                    int r = this.getWorld().getRandom().nextBetween(0, 140);
 
                     if (r == 3) {
                         target.dropStack(new ItemStack(TweakfailureItems.TALIONIUM));

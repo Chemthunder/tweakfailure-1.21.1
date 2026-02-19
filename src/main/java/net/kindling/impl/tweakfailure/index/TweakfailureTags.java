@@ -7,6 +7,7 @@ import net.minecraft.registry.tag.TagKey;
 
 public interface TweakfailureTags {
     TagKey<Item> CLEAVERS = TagKey.of(RegistryKeys.ITEM, Tweakfailure.id("cleavers"));
+    TagKey<Item> MUSIC_DISCS = TagKey.of(RegistryKeys.ITEM, Tweakfailure.id("music_discs"));
 
     static void index() {}
 }
