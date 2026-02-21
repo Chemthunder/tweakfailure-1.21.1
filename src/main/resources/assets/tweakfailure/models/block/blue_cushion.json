@@ -1,0 +1,7 @@
+{
+  "parent": "tweakfailure:block/cushion",
+  "textures": {
+    "0": "tweakfailure:block/blue_cushion",
+    "particle": "block/blue_wool"
+  }
+}

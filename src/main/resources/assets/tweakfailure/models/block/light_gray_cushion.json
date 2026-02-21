@@ -1,0 +1,7 @@
+{
+  "parent": "tweakfailure:block/cushion",
+  "textures": {
+    "0": "tweakfailure:block/light_gray_cushion",
+    "particle": "block/light_gray_wool"
+  }
+}

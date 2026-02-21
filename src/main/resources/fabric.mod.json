@@ -19,10 +19,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.kindling.impl.tweakfailure.Tweakfailure"
+      "net.kindling.tweakfailure.impl.Tweakfailure"
+    ],
+    "client": [
+      "net.kindling.tweakfailure.impl.TweakfailureClient"
     ],
     "fabric-datagen": [
-      "net.kindling.data.TweakfailureDataGenerator"
+      "net.kindling.tweakfailure.data.TweakfailureDataGenerator"
     ]
   },
   "mixins": [
