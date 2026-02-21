@@ -19,11 +19,11 @@ public interface TweakfailureItems {
     Item TALIONIUM = create("talionium", Item::new, new Item.Settings().jukeboxPlayable(TweakfailureSounds.TALIONIUM_MUSIC).rarity(Rarity.RARE).maxCount(1));
 
     // cleavers
-    Item FLINT_CLEAVER = create("flint_cleaver", settings -> new CleaverItem(ToolMaterials.WOOD, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.WOOD, 2, -2.5f)));
-    Item IRON_CLEAVER = create("iron_cleaver", settings -> new CleaverItem(ToolMaterials.IRON, settings),  new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.5f)));
-    Item GOLD_CLEAVER = create("gold_cleaver", settings -> new CleaverItem(ToolMaterials.GOLD, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.GOLD, 2, -2.5f)));
-    Item DIAMOND_CLEAVER = create("diamond_cleaver", settings -> new CleaverItem(ToolMaterials.DIAMOND, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 2, -2.5f)));
-    Item NETHERITE_CLEAVER = create("netherite_cleaver", settings -> new CleaverItem(ToolMaterials.NETHERITE, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 2, -2.5f)));
+    Item FLINT_CLEAVER = create("flint_cleaver", settings -> new CleaverItem(ToolMaterials.WOOD, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.WOOD, 2, -2.6f)));
+    Item IRON_CLEAVER = create("iron_cleaver", settings -> new CleaverItem(ToolMaterials.IRON, settings),  new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.IRON, 2, -2.6f)));
+    Item GOLD_CLEAVER = create("gold_cleaver", settings -> new CleaverItem(ToolMaterials.GOLD, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.GOLD, 2, -2.6f)));
+    Item DIAMOND_CLEAVER = create("diamond_cleaver", settings -> new CleaverItem(ToolMaterials.DIAMOND, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 2, -2.6f)));
+    Item NETHERITE_CLEAVER = create("netherite_cleaver", settings -> new CleaverItem(ToolMaterials.NETHERITE, settings), new Item.Settings().maxCount(1).attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 2, -2.6f)));
 
     // cushions
     Item WHITE_CUSHION_ITEM = create("white_cushion", settings -> new CushionBlockItem(TweakfailureBlocks.WHITE_CUSHION, settings), new Item.Settings());

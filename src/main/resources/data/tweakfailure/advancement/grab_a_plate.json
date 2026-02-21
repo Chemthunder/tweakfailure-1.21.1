@@ -3,8 +3,8 @@
     "icon": {
       "id": "tweakfailure:iron_cleaver"
     },
-    "title": "Rip & Tear",
-    "description": "Obtain a Cleaver"
+    "title": "Grab A Plate...",
+    "description": "Have a taste of a Cleaver"
   },
   "parent": "minecraft:husbandry/root",
   "criteria": {
