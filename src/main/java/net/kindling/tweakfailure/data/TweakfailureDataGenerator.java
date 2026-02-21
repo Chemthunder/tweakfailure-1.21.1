@@ -2,6 +2,7 @@ package net.kindling.tweakfailure.data;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.kindling.tweakfailure.data.data.TweakBlockLootTableGen;
 import net.kindling.tweakfailure.data.data.TweakItemTagGen;
 import net.kindling.tweakfailure.data.resources.TweakLangGen;
 import net.kindling.tweakfailure.data.resources.TweakModelGen;
@@ -13,6 +14,8 @@ public class TweakfailureDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(TweakLangGen::new);
         pack.addProvider(TweakModelGen::new);
+
         pack.addProvider(TweakItemTagGen::new);
+        pack.addProvider(TweakBlockLootTableGen::new);
 	}
 }

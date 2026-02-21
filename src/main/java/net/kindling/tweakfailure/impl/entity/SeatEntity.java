@@ -1,5 +1,6 @@
 package net.kindling.tweakfailure.impl.entity;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.kindling.tweakfailure.impl.Tweakfailure;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -21,6 +22,9 @@ public class SeatEntity extends Entity {
         living.setPosition(this.getX(), this.getY() + 2.0f, this.getZ());
 
         this.discard();
-        Tweakfailure.LOGGER.info("Seat discarded successfully");
+
+        if (FabricLoader.getInstance().isDevelopmentEnvironment()) {
+            Tweakfailure.LOGGER.info("Seat discarded successfully");
+        }
     }
 }
