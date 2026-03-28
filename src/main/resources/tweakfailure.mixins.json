@@ -3,6 +3,7 @@
   "package": "net.kindling.tweakfailure.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BeaconMixin",
     "ItemStackMixin",
     "LivingEntityMixin"
   ],
