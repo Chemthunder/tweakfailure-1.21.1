@@ -19,6 +19,6 @@ public class BeaconMixin {
             )
     )
     private static boolean redirectIsOfBedrock(BlockState state, Block block) {
-        return state.isIn(TweakfailureTags.BEACON_TRANSPARENT);
+        return !state.isIn(TweakfailureTags.BEACON_TRANSPARENT);
     }
 }
